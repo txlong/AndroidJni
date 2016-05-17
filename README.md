@@ -1,0 +1,2 @@
+# AndroidJni
+android studio,jni
