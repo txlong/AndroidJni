@@ -1,0 +1,31 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.ianonymous.androidjni"
+        minSdkVersion 14
+        targetSdkVersion 14
+
+        ndk {
+            moduleName "hello-jni"
+            ldLibs "log", "z", "m"
+            abiFilter "armeabi-v7a"/*, "armeabi", "x86"*/
+        }
+
+        testApplicationId "com.ianonymous.androidjni.tests"
+        testInstrumentationRunner "android.test.InstrumentationTestRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+        debug {
+            jniDebuggable true
+        }
+    }
+}
