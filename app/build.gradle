@@ -15,7 +15,7 @@ model {
         }
 
         ndk {
-            moduleName = 'MyJni'
+            moduleName = 'aes_jni'
             toolchain = 'clang'
             CFlags.addAll(['-Wall'])
             ldLibs.addAll(['android', 'log'])
