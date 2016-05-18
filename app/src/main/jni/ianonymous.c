@@ -14,7 +14,6 @@
  * limitations under the License.
  *
  */
-#include <string.h>
 #include <jni.h>
 #include <android/log.h>
 
@@ -60,10 +59,4 @@ Java_com_ianonymous_androidjni_HelloJni_stringFromJNI(JNIEnv *env, jobject thiz)
 
     __android_log_print(ANDROID_LOG_ERROR, "tag", "msg");
     return (*env)->NewStringUTF(env, "Hello from JNI !  Compiled with ABI " ABI ".");
-}
-
-JNIEXPORT jstring JNICALL
-Java_com_ianonymous_androidjni_HelloJni_unimplementedStringFromJNI(JNIEnv *env, jobject instance) {
-    char *s = (*env)->NewStringUTF(env, "为什么");
-    return s;
 }

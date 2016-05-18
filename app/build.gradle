@@ -15,7 +15,7 @@ model {
         }
 
         ndk {
-            moduleName = 'hello-jni'
+            moduleName = 'MyJni'
             toolchain = 'clang'
             CFlags.addAll(['-Wall'])
             ldLibs.addAll(['android', 'log'])
