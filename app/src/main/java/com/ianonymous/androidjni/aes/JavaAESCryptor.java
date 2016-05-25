@@ -45,7 +45,7 @@ public class JavaAESCryptor {
      * @return
      */
     public static byte[] encrypt(byte[] content) {
-        return docrypt(content, keyBytes, Cipher.ENCRYPT_MODE);
+        return decrypt(content, keyBytes, Cipher.ENCRYPT_MODE);
     }
 
     /**
@@ -56,10 +56,10 @@ public class JavaAESCryptor {
      * @return
      */
     public static byte[] decrypt(byte[] content) {
-        return docrypt(content, keyBytes, Cipher.DECRYPT_MODE);
+        return decrypt(content, keyBytes, Cipher.DECRYPT_MODE);
     }
 
-    public static byte[] docrypt(byte[] content, byte[] keyBytes, int mode) {
+    public static byte[] decrypt(byte[] content, byte[] keyBytes, int mode) {
         try {
             // KeyGenerator kgen = KeyGenerator.getInstance("AES");
             // kgen.init(128, new SecureRandom(keyBytes));

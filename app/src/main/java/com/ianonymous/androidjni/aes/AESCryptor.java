@@ -48,6 +48,4 @@ public class AESCryptor {
         }
         return buf.toString();
     }
-
-
 }
