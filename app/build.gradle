@@ -2,13 +2,13 @@ apply plugin: 'com.android.model.application'
 
 model {
     android {
-        compileSdkVersion = 23
-        buildToolsVersion = '23.0.3'
+        compileSdkVersion = 24
+        buildToolsVersion = '24.0.1'
 
         defaultConfig {
             applicationId = 'com.ianonymous.androidjni'
             minSdkVersion.apiLevel = 14
-            targetSdkVersion.apiLevel = 23
+            targetSdkVersion.apiLevel = 24
 
             testApplicationId = 'com.ianonymous.androidjni.tests'
             testInstrumentationRunner = 'android.test.InstrumentationTestRunner'
